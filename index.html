@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[Gelt] — Программирование для школы</title>
+  <style>
+    :root {
+      --primary: #4F46E5;
+      --primary-hover: #4338CA;
+      --bg: #F8FAFC;
+      --card: #FFFFFF;
+      --text: #0F172A;
+      --text-muted: #64748B;
+      --accent: #10B981;
+      --border: #E2E8F0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    nav {
+      position: sticky; top: 0; background: var(--card);
+      border-bottom: 1px solid var(--border); padding: 1rem 2rem;
+      display: flex; justify-content: space-between; align-items: center;
+      z-index: 100;
+    }
+    nav a { margin-left: 1.5rem; text-decoration: none; color: var(--text); font-weight: 500; }
+    nav a:hover { color: var(--primary); }
+    .logo { font-weight: 700; font-size: 1.25rem; color: var(--primary); }
+    section { padding: 4rem 2rem; max-width: 1000px; margin: 0 auto; }
+    h1, h2 { margin-bottom: 1rem; }
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; color: var(--primary); border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+    .hero { text-align: center; padding: 5rem 2rem; background: linear-gradient(135deg, #EEF2FF 0%, #F8FAFC 100%); }
+    .hero p { font-size: 1.2rem; color: var(--text-muted); margin: 1rem auto 2rem; max-width: 600px; }
+    .btn {
+      display: inline-block; padding: 0.8rem 1.5rem; background: var(--primary);
+      color: white; text-decoration: none; border-radius: 8px; font-weight: 600;
+      transition: background 0.2s;
+    }
+    .btn:hover { background: var(--primary-hover); }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+    .card { background: var(--card); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border); }
+    .card h3 { margin-bottom: 0.5rem; color: var(--primary); }
+    .timeline { border-left: 3px solid var(--primary); padding-left: 1.5rem; margin-left: 1rem; }
+    .timeline li { margin-bottom: 1.5rem; list-style: none; }
+    .timeline strong { color: var(--primary); }
+    form { display: grid; gap: 1rem; max-width: 600px; margin-top: 2rem; }
+    input, textarea, select {
+      padding: 0.8rem; border: 1px solid var(--border); border-radius: 8px;
+      font-family: inherit; font-size: 1rem;
+    }
+    footer { text-align: center; padding: 2rem; color: var(--text-muted); border-top: 1px solid var(--border); margin-top: 2rem; }
+    @media (max-width: 600px) {
+      nav { flex-direction: column; gap: 0.5rem; }
+      nav a { margin: 0 0.5rem; }
+      h1 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">[Gelt]</div>
+    <div>
+      <a href="#history">История</a>
+      <a href="#inspiration">Аналоги</a>
+      <a href="#team">Разработчики</a>
+      <a href="#feedback">Обратная связь</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <h1>Программирование, которое действительно понятно</h1>
+    <p>Учись кодить в игровом формате, офлайн, на русском языке. Идеально для школьной программы и не только.</p>
+    <a href="#" class="btn">Скачать приложение</a>
+  </section>
+
+  <section id="history">
+    <h2>📖 История создания</h2>
+    <p>Всё началось в сентябре 2025 года на обычном школьном уроке программирования. Мы разбирали базовые алгоритмы, и в какой-то момент пришла мысль: <em>«Почему нет приложения, которое учило бы коду так же увлекательно, как Duolingo учит языкам?»</em></p>
+    <br>
+    <p>Я начал изучать существующие площадки и быстро понял: рынок переполнен курсами для взрослых, но почти не учитывает школьную программу. Интерфейсы перегружены, кириллица и русский язык поддержки часто «на отвали», офлайн-режима нет, а бесплатные версии ограничивают прогресс. Учителям же попросту не дают инструментов, чтобы отслеживать успехи класса.</p>
+    <br>
+    <p>Так родилась идея создать приложение, которое:</p>
+    <ul class="timeline">
+      <li><strong>Адаптировано под школьную программу</strong> — от базовых конструкций до олимпиадных задач</li>
+      <li><strong>Работает без интернета</strong> — учишься в дороге, в классе, где угодно</li>
+      <li><strong>Полностью на русском</strong> — чёткие объяснения, поддержка кириллицы в коде и заданиях</li>
+      <li><strong>Дружелюбно к учителю</strong> — дашборд прогресса, экспорт отчётов, контроль тем</li>
+      <li><strong>Честно бесплатно</strong> — основной контент открыт, продвинутые модели опциональны</li>
+    </ul>
+    <br>
+    <p>Сегодня это не просто «ещё один курс». Это инструмент, который делает программирование доступным, понятным и по-настоящему школьным.</p>
+  </section>
+
+  <section id="inspiration">
+   <section id="founders">
+  <h2>👨‍💻 Кто создал аналоги?</h2>
+  <p>Кратко об основателях платформ, которые вдохновляли нас, и о том, как рождались их идеи.</p>
+  
+  <div class="grid">
+    <div class="card">
+      <h3>SoloLearn</h3>
+      <p><strong>Основатели:</strong> Ева Гюсанян (Yeva Hyusyan) и Давит Кочарян (Davit Kocharyan) [[4]][[9]]</p>
+      <p><strong>История:</strong> В 2014 году, после работы в Microsoft и проведения офлайн-буткемпов в Армении, они запустили SoloLearn с целью сделать обучение коду доступным каждому через смартфон. Платформа быстро стала популярной благодаря мобильному формату, игровым элементам и сильному комьюнити.</p>
+      <p><strong>Фокус:</strong> Микрообучение «на ходу», социальное взаимодействие, кроссплатформенность.</p>
+    </div>
+    
+    <div class="card">
+      <h3>Codecademy</h3>
+      <p><strong>Основатели:</strong> Зак Симс (Zach Sims) и Райан Бубински (Ryan Bubinski) [[11]][[12]]</p>
+      <p><strong>История:</strong> В 2011 году студенты Колумбийского университета Зак и Райан столкнулись с тем, что традиционное образование не даёт практических навыков программирования. Они создали первую версию Codecademy, чтобы Зак мог сам научиться кодить. После участия в акселераторе Y Combinator платформа стала мировым стандартом интерактивного обучения в браузере.</p>
+      <p><strong>Фокус:</strong> Обучение через практику прямо в браузере, карьерные треки, сертификации.</p>
+    </div>
+    
+    <div class="card">
+      <h3>Stepik</h3>
+      <p><strong>Основатель:</strong> Николай Вялых (Nikolay Vyahhi) [[19]][[24]]</p>
+      <p><strong>История:</strong> Платформа запущена в 2013 году российской командой под руководством Николая Вялых, биоинформатика и разработчика. Изначально создавалась как инструмент для проведения интерактивных онлайн-курсов с автоматической проверкой кода. Со временем Stepik стал крупнейшей русскоязычной платформой для курсов по IT, математике и анализу данных.</p>
+      <p><strong>Фокус:</strong> Гибкие инструменты для авторов курсов, мощная система задач, интеграция с вузами и научным сообществом.</p>
+    </div>
+    
+    <div class="card">
+      <h3>Hyperskill (JetBrains Academy)</h3>
+      <p><strong>Основатель:</strong> Николай Вялых в партнёрстве с JetBrains [[29]][[30]]</p>
+      <p><strong>История:</strong> Запущен в 2019 году как совместный проект с JetBrains — создателями профессиональных IDE (IntelliJ IDEA, PyCharm). Идея: учить программированию через создание реальных проектов, получая теорию именно тогда, когда она нужна для решения задачи. Платформа использует те же технологии, что и инструменты профессиональных разработчиков.</p>
+      <p><strong>Фокус:</strong> Проектно-ориентированное обучение, глубокая интеграция с IDE, подготовка к реальной работе в индустрии.</p>
+    </div>
+  </div>
+
+  <div class="card" style="background: #EEF2FF; border-color: #4F46E5; margin-top: 2rem;">
+    <h3 style="color: #4F46E5;">💡 Что мы взяли у них — и что сделали иначе</h3>
+    <p><strong>Взяли лучшее:</strong> геймификацию (SoloLearn), интерактивность в браузере (Codecademy), гибкость контента (Stepik), проектный подход (Hyperskill).</p>
+    <p><strong>Сделали для школы:</strong> полную адаптацию под ФГОС, офлайн-режим, 100% локализацию на русский, учительский дашборд и честную бесплатную модель без скрытых ограничений.</p>
+  </div>
+</section>
+  <section id="team">
+    <h2>👥 Разработчики</h2>
+    <p>Проект создан школьниками и энтузиастами образования для школьников. Мы верим, что лучший инструмент для учёбы должен создаваться теми, кто в ней реально участвует.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>Основатель & Идеолог</h3>
+        <p>[Imperor] — автор концепции, методология, координация разработки</p>
+      </div>
+      <div class="card">
+        <h3>Frontend & UI/UX</h3>
+        <p>[Imperor] — дизайн интерфейса, мобильная адаптация, анимации</p>
+      </div>
+      <div class="card">
+        <h3>Backend & Проверка кода</h3>
+        <p>[EEnot] — серверная логика, безопасный sandbox для выполнения задач</p>
+      </div>
+      <div class="card">
+        <h3>Методисты & Учителя</h3>
+        <p>Команда педагогов, проверяющих соответствие заданий ФГОС и школьным программам</p>
+      </div>
+    </div>
+    <p style="margin-top: 1.5rem; color: var(--text-muted);">Хотите в команду или помочь с контентом? Напишите нам в разделе обратной связи.</p>
+  </section>
+
+  <section id="feedback">
+    <h2>📩 Жалобы, вопросы и предложения</h2>
+    <p>Ваше мнение напрямую влияет на развитие приложения. Мы читаем каждое обращение и отвечаем в течение 3 рабочих дней.</p>
+    <form action="#" method="POST">
+      <input type="text" name="name" placeholder="Ваше имя" required>
+      <input type="email" name="email" placeholder="Email или Telegram" required>
+      <select name="type">
+        <option value="question">❓ Вопрос</option>
+        <option value="bug">🐛 Баг / Ошибка</option>
+        <option value="feature">💡 Предложение</option>
+        <option value="complaint">⚠️ Жалоба</option>
+      </select>
+      <textarea name="message" rows="5" placeholder="Опишите подробно..." required></textarea>
+      <button type="submit" class="btn" style="border: none; cursor: pointer;">Отправить</button>
+    </form>
+    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">* Для быстрой связи также доступен Telegram-бот: <a href="#">@your_bot</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025–2026 [Gelt]. Все права защищены.</p>
+    <p>Сделано с любовью к школьному программированию 🇷🇺</p>
+  </footer>
+
+</body>
+</html>
